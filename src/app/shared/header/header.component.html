@@ -1,0 +1,28 @@
+<mat-toolbar color="primary" class="mat-elevation-z8">
+    <mat-icon>store</mat-icon>
+    <button mat-flat-button color="primary" routerLink="/"><span font-size="small">ShoppingCart JS</span></button>
+    <div style="text-align: left;">
+        <button mat-flat-button [matMenuTriggerFor]="menu" color="primary">Agregar</button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item routerLink="/categorias">Categorias</button>
+                <button mat-menu-item routerLink="/productos">Productos</button>
+                <button mat-menu-item routerLink="/usuario">Usuario</button>
+                <button mat-menu-item routerLink="/direcciones">Direcciones</button>
+            </mat-menu>
+    </div>
+    <div style="text-align: left;">
+        <button mat-flat-button color="primary" routerLink="/comprar">Comprar</button>
+            
+    </div>
+
+    <span class="div-spacer"></span>
+    <button mat-raised-button color="primary"
+      matBadge="8" matBadgePosition="after" matBadgeColor="accent">
+        <mat-icon class="div-icon" aria-hidden="false" aria-label="verified icon">
+             add_shopping_cart
+        </mat-icon>
+    </button>
+    <mat-icon class="div-icon" aria-hidden="false" aria-label="verified icon">
+        person
+    </mat-icon>
+</mat-toolbar>

@@ -1,0 +1,44 @@
+<div class="container">
+    <br>
+    <form [formGroup]="dataForm">
+        <div class="row">
+            <div class="col">
+                <mat-label  class="mat-margin">Nombre</mat-label>
+                        <mat-form-field class="mat-full-width" appearance="fill">
+                        <mat-label>Digite el nombre</mat-label>
+                        <input matInput placeholder="indique el nombre" formControlName="nombre">
+                        </mat-form-field>
+                <mat-label class="mat-margin" ></mat-label>
+                <mat-label  class="mat-margin">Apellido</mat-label>
+                        <mat-form-field class="mat-full-width" appearance="fill">
+                        <mat-label>Digite el apellido</mat-label>
+                        <input matInput placeholder="indique el apellido" formControlName="apellido">
+                        </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <mat-label  class="mat-margin">Celular</mat-label>
+                        <mat-form-field class="mat-full-width" appearance="fill">
+                        <mat-label>Digite el numero de celular</mat-label>
+                        <input matInput placeholder="indique el numero de celular" formControlName="celular">
+                        </mat-form-field>
+                <mat-label class="mat-margin" ></mat-label>
+                <mat-label  class="mat-margin">Correo</mat-label>
+                        <mat-form-field class="mat-full-width" appearance="fill">
+                        <mat-label>Digite el correo</mat-label>
+                        <input matInput placeholder="indique el correo" formControlName="correo">
+                        </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button mat-flat-button color="primary" class="float-star" [routerLink]="['/usuario']">Regresar</button>
+            
+                <button mat-flat-button color="primary" class="float-end" (click)="guardar()" [routerLink]="['/usuario']">Guardar</button>
+            </div>
+        </div>
+    </form>
+
+</div>
+

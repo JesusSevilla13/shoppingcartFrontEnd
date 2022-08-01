@@ -1,0 +1,42 @@
+<div class="container">
+    <br>
+    <form [formGroup]="dataForm">
+        <div class="row">
+            <div class="col">
+                <mat-label>Nombre</mat-label>
+                <p></p>
+                        <mat-form-field class="mat-full-width" appearance="fill">
+                        <mat-label>Digite el nombre</mat-label>
+                        <input matInput placeholder="indique el nombre" formControlName="nombre">
+                        </mat-form-field>
+                <p></p>
+                <mat-label>Precio</mat-label>
+                <p></p>
+                        <mat-form-field class="mat-full-width" appearance="fill">
+                        <mat-label>Digite el precio</mat-label>
+                        <input matInput placeholder="indique el precio" formControlName="precio">
+                        </mat-form-field>
+                        <p></p>
+                        <mat-label>Categorias</mat-label>
+                <p></p>
+                <mat-form-field class="mat-full-width" appearance="fill">
+                <mat-label>Categorias</mat-label>
+                <mat-select matInput formControlName="id_Categorias" class="form-control">
+                <mat-option [value]="-1" selected>-Seleccione una categoria-</mat-option>
+                    <mat-option *ngFor="let element of listCategorias; let i = index" [value]="element.id">
+                    {{element.nombre}}
+                    </mat-option>
+                </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button mat-flat-button color="primary" class="float-star" [routerLink]="['/productos']">Regresar</button>
+            
+                <button mat-flat-button color="primary" class="float-end" (click)="guardar()" [routerLink]="['/productos']">Guardar</button>
+            </div>
+        </div>
+    </form>
+
+</div>

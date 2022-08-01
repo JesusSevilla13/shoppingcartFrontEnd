@@ -1,0 +1,8 @@
+<nav mat-tab-nav-bar  [tabPanel]="tabPanel">
+    <a mat-tab-link *ngFor="let element"> 
+   {{element.nombre}} 
+    </a>
+    
+  </nav>
+  <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
+ 

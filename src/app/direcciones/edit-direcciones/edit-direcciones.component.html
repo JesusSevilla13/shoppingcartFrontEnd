@@ -1,0 +1,36 @@
+<div class="container">
+    <br>
+    <form [formGroup]="dataForm">
+        <div class="row">
+            <div class="col">
+                <mat-label>dirección</mat-label>
+                <p></p>
+                        <mat-form-field class="mat-full-width" appearance="fill">
+                        <mat-label>Digite la dirección</mat-label>
+                        <input matInput placeholder="indique la dirección" formControlName="direccion">
+                        </mat-form-field>
+                        <p></p>
+                        <mat-label>Usuario</mat-label>
+                <p></p>
+                <mat-form-field class="mat-full-width" appearance="fill">
+                <mat-label>Usuarios</mat-label>
+                <mat-select matInput formControlName="id_Usuario" class="form-control">
+                <mat-option [value]="-1" selected>-Seleccione un usuario-</mat-option>
+                    <mat-option *ngFor="let element of listUsuario; let i = index" [value]="element.id">
+                    {{element.nombre}}
+                    </mat-option>
+                </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button mat-flat-button color="primary" class="float-star" [routerLink]="['/direcciones']">Regresar</button>
+            
+                <button mat-flat-button color="primary" class="float-end" (click)="guardar()" [routerLink]="['/direcciones']">Guardar</button>
+            </div>
+        </div>
+    </form>
+
+</div>
+
